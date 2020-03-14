@@ -28,3 +28,19 @@ cc_binary {
         "-Wno-constant-conversion",
     ],
 }
+
+cc_binary {
+    name: "iperf3",
+    srcs: [
+        "src/*.c",
+    ],
+    exclude_srcs: [
+        "src/t_*.c",
+    ],
+    cflags: [
+        "-Wno-unused-parameter",
+        "-Wno-unused-variable",
+        "-Wno-format",
+        "-Wno-constant-conversion",
+    ],
+}
